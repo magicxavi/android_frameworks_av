@@ -177,11 +177,12 @@ public:
         NUM_SOUNDS
     };
 
-    void                loadSound();
+    void                increaseSoundRef();
+    void                loadSound(sound_kind kind);
     void                ensureCameraShutterSoundDisabled(const String16& clientPackageName);
     void                playSound(sound_kind kind);
     void                releaseSound();
-
+    
     /**
      * Update the state of a given camera device (open/close/active/idle) with
      * the camera proxy service in the system service
